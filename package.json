@@ -1,4 +1,14 @@
 {
+  "name": "mp-saas-com-nextjs-e-stripe",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "postinstall": "prisma generate"
+  },
   "dependencies": {
     "@libsql/client": "^0.8.1",
     "@prisma/adapter-libsql": "^5.21.1",
@@ -10,23 +20,27 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.456.0",
-    "next": "^13.4.0",  // Atualize para uma versão estável mais recente, como a 13.4
+    "next": "^13.4.0",
     "next-auth": "^5.0.0-beta.25",
     "prisma": "^5.22.0",
-    "react": "^18.2.0",  // Alterar para uma versão estável do React (18.x)
-    "react-dom": "^18.2.0",  // Acompanhe a versão do React para o ReactDOM
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "stripe": "^17.3.1",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^22",
-    "@types/react": "^18.0.0",  // Alinhe a versão do tipo com o React 18
-    "@types/react-dom": "^18.0.0",  // Alinhe a versão do tipo com o React 18
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
     "eslint": "^9",
-    "eslint-config-next": "^13.4.0",  // Atualize para a versão correspondente do Next.js
+    "eslint-config-next": "^13.4.0",
     "postcss": "^8",
     "tailwindcss": "^3.4.14",
     "typescript": "^5"
+  },
+  "overrides": {
+    "@types/react": "npm:types-react@19.0.0-rc.1",
+    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1"
   }
 }
